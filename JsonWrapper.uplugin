@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "JsonWrapper",
+	"Description": "Some Json utilities to prevent repetitive code",
+	"Category": "Other",
+	"CreatedBy": "Milayr",
+	"CreatedByURL": "",
+	"DocsURL": "https://github.com/sfremann/JsonWrapper",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "JsonWrapperRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
