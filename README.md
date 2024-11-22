@@ -32,7 +32,7 @@ For __local__ installation (specific project): download release or clone reposit
 
 Then it should show up in your project when you go to `Edit > Plugins`.
 
-## Dependencies
+### Dependencies
 
 You can use code from the JsonWrapper plugin in your project or in other plugins. For this, you need to set up dependencies for the JsonWrapperRuntime module.
 - __Project__ `Build.cs` -> "`/[ProjectName]/Source/[ProjectName]/[ProjectName].Build.cs"`
