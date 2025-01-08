@@ -10,9 +10,7 @@
  */
 class FJsonWrapperRuntimeModule : public IModuleInterface
 {
-public:
-
-	/** IModuleInterface implementation */
+public:	/** IModuleInterface implementation */
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
 };

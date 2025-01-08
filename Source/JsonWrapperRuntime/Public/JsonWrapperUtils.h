@@ -3,22 +3,24 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "JsonWrapperUtils.generated.h"
 
 /**
  * Wrapping utilities to avoid repetitive code when using Unreal built-in Json functions 
  */
 UCLASS()
-class JSONWRAPPERRUNTIME_API UJsonWrapperUtils : public UBlueprintFunctionLibrary
+class JSONWRAPPERRUNTIME_API UJsonWrapperUtils : public UObject
 {
 	GENERATED_BODY()
 
 public:
+	/** Serialize JsonObject to FString */
 	static FString SerializeJson(TSharedPtr<FJsonObject> JsonObject);
-	static bool DeserializeJson(TSharedPtr<FJsonObject>* JsonObject, FString SerializedJson);
+	/** Deserialize FString to JsonObject - return false if failed */
+	static bool DeserializeJson(TSharedPtr<FJsonObject>* JsonObject, const FString& SerializedJson);
 
-	static void WriteJsonToFile(TSharedPtr<FJsonObject> JsonObject, FString Filename);
-	static bool LoadJsonFromFile(TSharedPtr<FJsonObject>* JsonObject, FString Filename);
-	
+	/** Serialize and write JsonObject to file */
+	static void WriteJsonToFile(TSharedPtr<FJsonObject> JsonObject, const FString& Filename);
+	/** Load and deserialize JsonObject from file - return false if failed */
+	static bool LoadJsonFromFile(TSharedPtr<FJsonObject>* JsonObject, const FString& Filename);
 };
