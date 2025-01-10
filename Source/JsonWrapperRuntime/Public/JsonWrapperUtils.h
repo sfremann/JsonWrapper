@@ -1,4 +1,4 @@
-// Copyright Milayr, 2024. All rights reserved.
+// Copyright Sarah Frémann, 2024. All rights reserved.
 
 #pragma once
 
